@@ -35,7 +35,7 @@ const ProductListPage = () => {
           categoryId: categoryId,
           subCategoryId: subCategoryId,
           page: page,
-          limit: 8,
+          limit: 10,
         }
       })
 
@@ -58,8 +58,22 @@ const ProductListPage = () => {
 
   useEffect(() => {
     fetchProductdata()
-  }, [params])
+  }, [params, page])
 
+
+const handleNext = ()=>{
+    if(page !== totalPage){
+      setPage(preve => preve + 1)
+    }
+  }
+  const handlePrevious = ()=>{
+    if(page > 1){
+      setPage(preve => preve - 1)
+    }
+  }
+  
+  
+  
 
   useEffect(() => {
     const sub = AllSubCategory.filter(s => {
@@ -115,14 +129,19 @@ const ProductListPage = () => {
                     return (
                       <CardProduct
                         data={p}
+                        fetchProductdata={fetchProductdata}
                         key={p._id + "productSubCategory" + index}
                       />
                     )
                   })
                 }
+                <div className='flex justify-between my-4'>
+              <button onClick={handlePrevious} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Previous</button>
+              <button className='w-full bg-slate-100'>{page*10}/{totalPage}</button>
+              <button onClick={handleNext} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Next</button>
+            </div>
               </div>
            </div>
-
             {
               loading && (
                 <Loading />
@@ -137,3 +156,4 @@ const ProductListPage = () => {
 }
 
 export default ProductListPage
+
