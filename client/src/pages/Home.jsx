@@ -75,20 +75,40 @@ const Home = () => {
       </div>
 
       {/***display category product */}
-      {
-        categoryData?.map((c,index)=>{
-          return(
-            <CategoryWiseProductDisplay 
-              key={c?._id+"CategorywiseProduct"} 
-              id={c?._id} 
-              name={c?.name}
-            />
-          )
-        })
-      }
-
-
-
+      
+      
+      
+    
+        <div>
+            <div className='container mx-auto p-4 flex items-center justify-between gap-4'>
+                <h3 className='font-semibold text-lg md:text-xl'>Food</h3>
+                <Link  to="Food-674dd928dd200f4d12053b34/Non-Vegetarians-67922dfb10381e8d7993f715" className='text-green-600 hover:text-green-400'>See All</Link>
+            </div>
+        </div>
+        <div>
+            <div className='container mx-auto p-4 flex items-center justify-between gap-4'>
+                <h3 className='font-semibold text-lg md:text-xl'>Fruit and vegetables</h3>
+                <Link  to="Fruit-and-vegetables--674dd910dd200f4d12053b31/Fresh-Fruit--6793243f70d82fb0d1ac0c1a" className='text-green-600 hover:text-green-400'>See All</Link>
+            </div>
+        </div>
+        <div>
+            <div className='container mx-auto p-4 flex items-center justify-between gap-4'>
+                <h3 className='font-semibold text-lg md:text-xl'>General</h3>
+                <Link  to="/" className='text-green-600 hover:text-green-400'>See All</Link>
+            </div>
+        </div>
+        <div>
+            <div className='container mx-auto p-4 flex items-center justify-between gap-4'>
+                <h3 className='font-semibold text-lg md:text-xl'>Grocery</h3>
+                <Link  to="/" className='text-green-600 hover:text-green-400'>See All</Link>
+            </div>
+        </div>
+        <div>
+            <div className='container mx-auto p-4 flex items-center justify-between gap-4'>
+                <h3 className='font-semibold text-lg md:text-xl'>Sweets</h3>
+                <Link  to="/" className='text-green-600 hover:text-green-400'>See All</Link>
+            </div>
+        </div>
    </section>
   )
 }
