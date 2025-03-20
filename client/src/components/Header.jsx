@@ -70,7 +70,7 @@ const Header = () => {
                                
                                            
                                             className='hidden lg:block text-blue-600 font-bold text-lg'
-                                        >Quickit Now</h1>
+                                        >MaDurga Shop, Vishunganj</h1>
                        
                                         <h1 
                                             
@@ -78,7 +78,7 @@ const Header = () => {
                                             
                                             
                                             className='lg:hidden text-blue-600 font-bold text-lg'
-                                        >Quickit Now</h1>
+                                        >MaDurga Shop, Vishunganj</h1>
                                     </Link>
                                 </div>
 
